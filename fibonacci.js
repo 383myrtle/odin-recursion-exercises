@@ -13,3 +13,20 @@ function fibs(n) {
   }
   return arr;
 }
+
+console.log(fibs(8));
+
+console.log("Fibonacci - recursive version");
+
+function fibsRec(n) {
+  let arr;
+  if (n === 2) {
+    return [0, 1];
+  } else {
+    arr = fibsRec(n - 1);
+    arr.push(arr.at(-1) + arr.at(-2));
+    return arr;
+  }
+}
+
+console.log(fibsRec(8));
